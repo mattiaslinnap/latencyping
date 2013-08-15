@@ -3,6 +3,8 @@
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
+LOGIN_URL = '/admin/'
+
 ADMINS = (
     ('Mattias Linnap', 'mattias@linnap.com'),
 )
