@@ -11,12 +11,10 @@
 <body>
 <div class="container">
 <div class="row">
-    <h1>Uploads</h1>
-
     {% for name, uploads in byname %}
-        <h2>{{ name }}</h2>
+        <h1>{{ name }}</h1>
         {% for upload in uploads %}
-            <h3>{{ upload.time }}</h3>
+            <h3>{{ upload.time }} <a class="btn btn-small btn-danger" href="{% url 'ping.views.delete' upload.id %}">Delete</a></h3>
             <p>{{ upload.content|linebreaksbr }}</p>
         {% endfor %}
     {% endfor %}
